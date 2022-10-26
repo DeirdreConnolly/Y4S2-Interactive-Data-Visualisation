@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>COMP8054 W2 Lab</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/6.5.0/d3.min.js " type="text/JavaScript"></script>
+    <style>
+    </style>
+</head>
+
+
+<body id="theBody">
+
+
+<h2>COMP8054_W3_Information_Visualisation_Data_Flow</h2>
+
+<script src="https://d3js.org/d3-dsv.v2.min.js"></script>
+<script src="https://d3js.org/d3-fetch.v2.min.js"></script>
+
+<script>
+
+    // <!-- d3 v5 uses the fetch API and returns a promise requiring the below code. -->
+    // <!-- https://github.com/d3/d3-fetch -->
+
+
+    d3.csv("cities.csv").then(function (data) {
+        // data is now whole data set
+        // draw chart in here!
+        console.log(data);
+    }).catch(function (error) {
+        // handle error
+    });
+
+    d3.json("tweets.json").then(function (data) {
+        // data is now whole data set
+        // draw chart in here!
+        console.log(data.tweets);
+    }).catch(function (error) {
+        // handle error
+    });
+
+    // Take data as arg, is invoked from within handler once data is accessible, output data to console
+    function dataVis(data) {
+        
+        console.log(data)
+    }
+
+</script>
+
+</body>
+
+</html>
+
+
